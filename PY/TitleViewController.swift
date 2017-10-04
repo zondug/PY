@@ -8,11 +8,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class TitleViewController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
+		
+		print("ViewController is loaded")
 	}
 
 	override func didReceiveMemoryWarning() {

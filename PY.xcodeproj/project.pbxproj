@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		EEAD68921F84CCF800BC6A81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAD68911F84CCF800BC6A81 /* AppDelegate.swift */; };
-		EEAD68941F84CCF800BC6A81 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAD68931F84CCF800BC6A81 /* ViewController.swift */; };
+		EEAD68941F84CCF800BC6A81 /* TitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAD68931F84CCF800BC6A81 /* TitleViewController.swift */; };
 		EEAD68971F84CCF800BC6A81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEAD68951F84CCF800BC6A81 /* Main.storyboard */; };
 		EEAD689A1F84CCF800BC6A81 /* PY.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EEAD68981F84CCF800BC6A81 /* PY.xcdatamodeld */; };
 		EEAD689C1F84CCF800BC6A81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEAD689B1F84CCF800BC6A81 /* Assets.xcassets */; };
 		EEAD689F1F84CCF800BC6A81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEAD689D1F84CCF800BC6A81 /* LaunchScreen.storyboard */; };
 		EEAD68AA1F84CCF900BC6A81 /* PYTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAD68A91F84CCF900BC6A81 /* PYTests.swift */; };
 		EEAD68B51F84CCF900BC6A81 /* PYUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAD68B41F84CCF900BC6A81 /* PYUITests.swift */; };
+		EEAD68C41F84D52D00BC6A81 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAD68C31F84D52D00BC6A81 /* GameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +38,7 @@
 /* Begin PBXFileReference section */
 		EEAD688E1F84CCF800BC6A81 /* PY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEAD68911F84CCF800BC6A81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EEAD68931F84CCF800BC6A81 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EEAD68931F84CCF800BC6A81 /* TitleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewController.swift; sourceTree = "<group>"; };
 		EEAD68961F84CCF800BC6A81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EEAD68991F84CCF800BC6A81 /* PY.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PY.xcdatamodel; sourceTree = "<group>"; };
 		EEAD689B1F84CCF800BC6A81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +50,7 @@
 		EEAD68B01F84CCF900BC6A81 /* PYUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PYUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEAD68B41F84CCF900BC6A81 /* PYUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PYUITests.swift; sourceTree = "<group>"; };
 		EEAD68B61F84CCF900BC6A81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EEAD68C31F84D52D00BC6A81 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +101,11 @@
 		EEAD68901F84CCF800BC6A81 /* PY */ = {
 			isa = PBXGroup;
 			children = (
-				EEAD68911F84CCF800BC6A81 /* AppDelegate.swift */,
-				EEAD68931F84CCF800BC6A81 /* ViewController.swift */,
+				EEAD68C21F84CD1900BC6A81 /* Supporting Files */,
+				EEAD68931F84CCF800BC6A81 /* TitleViewController.swift */,
+				EEAD68C31F84D52D00BC6A81 /* GameViewController.swift */,
 				EEAD68951F84CCF800BC6A81 /* Main.storyboard */,
-				EEAD689B1F84CCF800BC6A81 /* Assets.xcassets */,
-				EEAD689D1F84CCF800BC6A81 /* LaunchScreen.storyboard */,
 				EEAD68A01F84CCF800BC6A81 /* Info.plist */,
-				EEAD68981F84CCF800BC6A81 /* PY.xcdatamodeld */,
 			);
 			path = PY;
 			sourceTree = "<group>";
@@ -126,6 +126,17 @@
 				EEAD68B61F84CCF900BC6A81 /* Info.plist */,
 			);
 			path = PYUITests;
+			sourceTree = "<group>";
+		};
+		EEAD68C21F84CD1900BC6A81 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EEAD689B1F84CCF800BC6A81 /* Assets.xcassets */,
+				EEAD68981F84CCF800BC6A81 /* PY.xcdatamodeld */,
+				EEAD68911F84CCF800BC6A81 /* AppDelegate.swift */,
+				EEAD689D1F84CCF800BC6A81 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,7 +273,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EEAD68941F84CCF800BC6A81 /* ViewController.swift in Sources */,
+				EEAD68C41F84D52D00BC6A81 /* GameViewController.swift in Sources */,
+				EEAD68941F84CCF800BC6A81 /* TitleViewController.swift in Sources */,
 				EEAD68921F84CCF800BC6A81 /* AppDelegate.swift in Sources */,
 				EEAD689A1F84CCF800BC6A81 /* PY.xcdatamodeld in Sources */,
 			);
