@@ -11,16 +11,11 @@ import UIKit
 
 class CellsView: UIView {
 	
-	var cells = [String: UIView]()
 	var textlabel: UILabel!
 	
-	override init(frame: CGRect) {
-		super.init(frame: frame)
-	}
-	
-	required init?(coder aDecoder: NSCoder) {
-		super.init(coder: aDecoder)
-	}
+//	required init?(coder aDecoder: NSCoder) {
+//		super.init(coder: aDecoder)
+//	}
 	
 	func drawingCells() {
 		
@@ -38,10 +33,8 @@ class CellsView: UIView {
 			for cols in 0...(noOfCells-1) {
 				
 				let back = UIView()
-				let cell = UIView()
-				
 				back.frame = CGRect(x: centering + (rows * cellsize) + (spacing * rows), y: centering + (cols * cellsize) + (spacing * cols), width: cellsize, height: cellsize)
-				cell.frame = back.bounds
+				let cell: UIView = UIView(frame: back.bounds)
 //				cell.backgroundColor = self.randomColor()
 				
 				textlabel = UILabel(frame: cell.bounds)
@@ -53,17 +46,21 @@ class CellsView: UIView {
 				
 				cell.layer.borderWidth = 1.5
 				cell.layer.borderColor = UIColor.white.cgColor
-				cell.layer.cornerRadius = 8
+				cell.layer.cornerRadius = 2
 				cell.layer.masksToBounds = true;
 				
 				cell.bringSubview(toFront: textlabel)
 				back.addSubview(cell)
 				self.addSubview(back)
 				
-				let key = "\(rows)|\(cols)"
+				key = "\(rows)|\(cols)"
 				cells[key] = cell
+
 			}
+			
 		}
+		
+		
 	}
 	
 }

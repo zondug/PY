@@ -10,10 +10,13 @@ import UIKit
 
 class GameViewController: UIViewController {
 
-	
 	@IBOutlet var weatherUI: UILabel!
 	@IBOutlet var distanceUI: UILabel!
 	@IBOutlet var cellsView: CellsView!
+	
+	@IBAction func tap(_ sender: Any) {
+		
+	}
 	
     override func viewDidLoad() {
         super.viewDidLoad()
