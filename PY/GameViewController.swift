@@ -10,15 +10,21 @@ import UIKit
 
 class GameViewController: UIViewController {
 
+	
+	@IBOutlet var weatherUI: UILabel!
+	@IBOutlet var distanceUI: UILabel!
+	@IBOutlet var cellsView: CellsView!
+	
     override func viewDidLoad() {
         super.viewDidLoad()
+				
+//		print("Game View is loaded.")
+		cellsView.drawingCells()
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 
