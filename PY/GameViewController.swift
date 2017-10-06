@@ -44,14 +44,19 @@ class GameViewController: UIViewController {
 		}
 		
 		var distance: CGFloat = 0.0
-		let defaultDistance: CGFloat = 40.0
-		let maximumDistance: CGFloat = 150
+		let center: CGFloat = 30.0
+		let close: CGFloat = 120
+//		let far: CGFloat = 180
 		
 		switch swiped.state {
 			
 		case .began:
-			firstLocation = swiped.location(in: view)
+			if view.frame.contains(swiped.location(in: view)) {
+
+				firstLocation = swiped.location(in: view)
 			
+			}
+				
 		case .changed:
 			secondLocation = swiped.location(in: view)
 			
@@ -61,12 +66,12 @@ class GameViewController: UIViewController {
 			
 			//			거리에 따라 두 칸 이동 처리
 			
-			if distance < defaultDistance {
+			if distance < center {
 				
 				key = direction.center.rawValue
 				effect.zoom(key: key)
 				
-			} else if defaultDistance < distance && distance < maximumDistance {
+			} else if center < distance && distance < close {
 				
 				switch angle {
 				case 22.5 ..< 67.5:
@@ -95,8 +100,8 @@ class GameViewController: UIViewController {
 			
 		case .ended:
 			//			print("released")
-			effect.zoom(key: key)
 			effect.normalize(key: key)
+			effect.reverse(key: key)
 			return
 			
 		default:

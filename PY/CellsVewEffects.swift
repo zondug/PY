@@ -35,15 +35,17 @@ class CellsVewEffects: UIView {
 	func reverse(key: String) {
 		
 		targetcell = cells[key]
-		let frontCell = UIView()
+		
+		// frontCell은 카드를 뒤집을 때 나오는 화면임 -> 확대 -> 터치(사라짐) -> 셀 뷰 삭제 -> 이동
+		let frontCell = UIImageView()
 		
 		frontCell.frame = (targetcell?.bounds)!
 		
 		frontCell.backgroundColor = .gray
-		frontCell.layer.borderWidth = 2
+		frontCell.layer.borderWidth = 1.5
 		frontCell.layer.borderColor = UIColor.gray.cgColor
-		frontCell.layer.cornerRadius = 8;
-		frontCell.layer.masksToBounds = true;
+		frontCell.layer.cornerRadius = 2
+		frontCell.layer.masksToBounds = true
 		
 		
 		UIView.transition(from: targetcell!, to: frontCell, duration: 0.3, options: UIViewAnimationOptions.transitionFlipFromRight, completion: nil)
