@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class CellsView: UIView {
+class CellsView: UIImageView {
 	
 	var textlabel: UILabel!
 	
@@ -34,7 +34,7 @@ class CellsView: UIView {
 				
 				let back = UIView()
 				back.frame = CGRect(x: centering + (rows * cellsize) + (spacing * rows), y: centering + (cols * cellsize) + (spacing * cols), width: cellsize, height: cellsize)
-				let cell: UIView = UIView(frame: back.bounds)
+				let cell: UIImageView = UIImageView(frame: back.bounds)
 //				cell.backgroundColor = self.randomColor()
 				
 				textlabel = UILabel(frame: cell.bounds)

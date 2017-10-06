@@ -29,6 +29,7 @@ class CellsVewEffects: UIView {
 		}, completion: nil)
 		
 		targetcell?.backgroundColor = .black
+		
 	}
 	
 	func reverse(key: String) {

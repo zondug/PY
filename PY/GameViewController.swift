@@ -52,8 +52,6 @@ class GameViewController: UIViewController {
 		case .began:
 			firstLocation = swiped.location(in: view)
 			
-			//			print("first touched")
-			
 		case .changed:
 			secondLocation = swiped.location(in: view)
 			
@@ -91,8 +89,9 @@ class GameViewController: UIViewController {
 				}
 				
 			}  else  {
-				return
+				break
 			}
+
 			
 		case .ended:
 			//			print("released")
@@ -101,7 +100,6 @@ class GameViewController: UIViewController {
 			return
 			
 		default:
-			
 			break
 		}
 	}

@@ -32,3 +32,21 @@ enum direction: String {
 	case west = "1|2"
 	case northwest = "1|1"
 }
+
+extension UIView {
+	
+	func createImage() -> UIImage {
+		
+		let rect: CGRect = self.frame
+		
+		UIGraphicsBeginImageContext(rect.size)
+		let context: CGContext = UIGraphicsGetCurrentContext()!
+		self.layer.render(in: context)
+		let img = UIGraphicsGetImageFromCurrentImageContext()
+		UIGraphicsEndImageContext()
+		
+		return img!
+		
+	}
+	
+}
