@@ -5,12 +5,12 @@ import Foundation
 // cells를 전역 변수로 만듬
 var cells = [String: UIView]()
 
-var key: String = targetcell.center.rawValue {
+var key: String = direction.center.rawValue {
 	willSet {
 		// if key is changed
 		if key != newValue {
-			//			effect.normalize(key: key)
-			//			effect.zoom(key: newValue)
+			effect.normalize(key: key)
+			effect.zoom(key: newValue)
 			// if key is not changed, just do nothing
 		} else if key == newValue {
 			return
@@ -19,8 +19,9 @@ var key: String = targetcell.center.rawValue {
 }
 
 var effect = CellsVewEffects()
+var targetcell: UIView?
 
-enum targetcell: String {
+enum direction: String {
 	case center = "2|2"
 	case north = "2|1"
 	case northeast = "3|1"

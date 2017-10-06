@@ -10,15 +10,14 @@ import UIKit
 
 class CellsVewEffects: UIView {
 	
-	var targetcell: UIView?
-	
 	func zoom(key: String) {
 		
 		targetcell = cells[key]
 		
 		UIView.animate(withDuration: 0.1, delay: 0, options: .curveEaseOut, animations: {
-			self.targetcell?.layer.transform = CATransform3DMakeScale(1.1, 1.1, 1.1)
+			targetcell?.layer.transform = CATransform3DMakeScale(1.1, 1.1, 1.1)
 		}, completion: nil)
+		targetcell?.backgroundColor = .yellow
 	}
 	
 	func normalize(key: String) {
@@ -26,9 +25,10 @@ class CellsVewEffects: UIView {
 		targetcell = cells[key]
 		
 		UIView.animate(withDuration: 0.1, delay: 0, options: .curveEaseOut, animations: {
-			self.targetcell?.layer.transform = CATransform3DMakeScale(1.0, 1.0, 1.0)
+			targetcell?.layer.transform = CATransform3DMakeScale(1.0, 1.0, 1.0)
 		}, completion: nil)
 		
+		targetcell?.backgroundColor = .black
 	}
 	
 	func reverse(key: String) {
