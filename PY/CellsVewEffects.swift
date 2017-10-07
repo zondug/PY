@@ -47,8 +47,7 @@ class CellsVewEffects: UIView {
 		frontCell.layer.cornerRadius = 2
 		frontCell.layer.masksToBounds = true
 		
-		
-		UIView.transition(from: targetcell!, to: frontCell, duration: 0.3, options: UIViewAnimationOptions.transitionFlipFromRight, completion: nil)
+		UIView.transition(from: targetcell!, to: frontCell, duration: 0.2, options: UIViewAnimationOptions.transitionFlipFromRight, completion: nil)
 		
 	}
 

@@ -44,8 +44,8 @@ class GameViewController: UIViewController {
 		}
 		
 		var distance: CGFloat = 0.0
-		let center: CGFloat = 30.0
-		let close: CGFloat = 120
+		let center: CGFloat = 25.0
+		let close: CGFloat = 90
 //		let far: CGFloat = 180
 		
 		switch swiped.state {
@@ -71,7 +71,7 @@ class GameViewController: UIViewController {
 				key = direction.center.rawValue
 				effect.zoom(key: key)
 				
-			} else if center < distance && distance < close {
+			} else if center < distance && distance <= close {
 				
 				switch angle {
 				case 22.5 ..< 67.5:
@@ -93,7 +93,11 @@ class GameViewController: UIViewController {
 				default: break
 				}
 				
-			}  else  {
+			} else if close < distance {
+				
+				break
+				
+			} else  {
 				break
 			}
 

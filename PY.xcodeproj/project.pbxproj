@@ -19,7 +19,9 @@
 		EEAD68C61F84DED900BC6A81 /* CellsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAD68C51F84DED900BC6A81 /* CellsView.swift */; };
 		EEAD68C81F8634A700BC6A81 /* CellsVewEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAD68C71F8634A700BC6A81 /* CellsVewEffects.swift */; };
 		EEAD68CA1F86412D00BC6A81 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAD68C91F86412C00BC6A81 /* Color.swift */; };
+		EECACAF11F88E4E8003287E0 /* Actors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECACAF01F88E4E8003287E0 /* Actors.swift */; };
 		EEFA5B541F869AC70037FAA0 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFA5B531F869AC70037FAA0 /* Globals.swift */; };
+		EEFC74A91F87922C00FAB69E /* CellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFC74A81F87922C00FAB69E /* CellData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +60,9 @@
 		EEAD68C51F84DED900BC6A81 /* CellsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellsView.swift; sourceTree = "<group>"; };
 		EEAD68C71F8634A700BC6A81 /* CellsVewEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellsVewEffects.swift; sourceTree = "<group>"; };
 		EEAD68C91F86412C00BC6A81 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		EECACAF01F88E4E8003287E0 /* Actors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actors.swift; sourceTree = "<group>"; };
 		EEFA5B531F869AC70037FAA0 /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
+		EEFC74A81F87922C00FAB69E /* CellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,8 @@
 				EEAD68931F84CCF800BC6A81 /* TitleViewController.swift */,
 				EEAD68C31F84D52D00BC6A81 /* GameViewController.swift */,
 				EEFA5B531F869AC70037FAA0 /* Globals.swift */,
+				EECACAF01F88E4E8003287E0 /* Actors.swift */,
+				EEFC74A81F87922C00FAB69E /* CellData.swift */,
 				EEAD68C91F86412C00BC6A81 /* Color.swift */,
 				EEAD68C71F8634A700BC6A81 /* CellsVewEffects.swift */,
 				EEAD68C51F84DED900BC6A81 /* CellsView.swift */,
@@ -286,7 +292,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEAD68C61F84DED900BC6A81 /* CellsView.swift in Sources */,
+				EECACAF11F88E4E8003287E0 /* Actors.swift in Sources */,
 				EEAD68C41F84D52D00BC6A81 /* GameViewController.swift in Sources */,
+				EEFC74A91F87922C00FAB69E /* CellData.swift in Sources */,
 				EEAD68CA1F86412D00BC6A81 /* Color.swift in Sources */,
 				EEAD68941F84CCF800BC6A81 /* TitleViewController.swift in Sources */,
 				EEFA5B541F869AC70037FAA0 /* Globals.swift in Sources */,
