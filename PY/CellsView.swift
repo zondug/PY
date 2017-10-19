@@ -58,7 +58,7 @@ class CellsView: UIImageView {
 			}
 			
 		}
-		
+	
 
 	}
 	

@@ -10,7 +10,8 @@ import Foundation
 import UIKit
 
 class CellData {
-//	맵 데이터를 만들어야 한다 
+//	맵 데이터를 만들어야 한다
+	
 	var name: String?
 	var type: String?
 	var color: String?

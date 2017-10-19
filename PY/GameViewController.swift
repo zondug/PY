@@ -24,6 +24,7 @@ class GameViewController: UIViewController {
 				
 //		print("Game View is loaded.")
 		cellsView.drawingCells()
+		effect.glow(key: "2|2")
 
 		// ????? what is this fuckin "@objc" on func ?????
 		view.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(self.swipes(swiped:))))

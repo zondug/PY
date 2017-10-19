@@ -49,6 +49,33 @@ class CellsVewEffects: UIView {
 		
 		UIView.transition(from: targetcell!, to: frontCell, duration: 0.2, options: UIViewAnimationOptions.transitionFlipFromRight, completion: nil)
 		
+		frontCell.backgroundColor = .red
+		cells[key] = frontCell
+		
+	}
+	
+	func glow(key: String) {
+		
+		targetcell = cells[key]
+		let tempEffectView: UIView = UIView(frame: (targetcell?.bounds)!)
+		tempEffectView.frame.size.width = (targetcell?.frame.size.width)! + CGFloat(50)
+		tempEffectView.frame.size.height = (targetcell?.frame.size.height)! + CGFloat(50)
+		
+		tempEffectView.backgroundColor = tempcolor
+		
+		
+		tempEffectView.bringSubview(toFront: targetcell!)
+		targetcell?.addSubview(tempEffectView)
+		
+		UIView.animate(withDuration: 5.0, delay: 0.0,
+		               options: [.repeat, .autoreverse, .curveEaseOut],
+		               animations: {
+						tempEffectView.frame.size.width -= 10
+						tempEffectView.frame.size.width += 10
+		},
+		               completion: nil
+		)
+		
 	}
 
 }
