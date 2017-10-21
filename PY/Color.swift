@@ -2,13 +2,21 @@ import UIKit
 
 // named color from CSS
 
+// my Uses
+let myred = UIColor(red: 255/255, green: 0/255, blue: 0/255, alpha: 1.0) // 종필 추천
+let myorangestic = UIColor(displayP3Red: 242/255, green: 121/255, blue: 7/255, alpha: 1.0)
+let mybluestic = UIColor(displayP3Red: 9/255, green: 108/255, blue: 228/255, alpha: 1.0)
+let mybrownoise = UIColor(displayP3Red: 150/255, green: 63/255, blue: 10/255, alpha: 1.0)
+let myskybluerse = UIColor(displayP3Red: 88/255, green: 195/255, blue: 195/255, alpha: 1.0)
+
+// general Uses
+
 let indianred = UIColor(red: 205/255, green: 92/255, blue: 92/255, alpha: 1.0)
 let lightcoral = UIColor(red: 240/255, green: 128/255, blue: 128/255, alpha: 1.0)
 let salmon = UIColor(red: 250/255, green: 128/255, blue: 114/255, alpha: 1.0)
 let darksalmon = UIColor(red: 233/255, green: 150/255, blue: 122/255, alpha: 1.0)
 let lightsalmon = UIColor(red: 255/255, green: 160/255, blue: 122/255, alpha: 1.0)
 let crimson = UIColor(red: 220/255, green: 20/255, blue: 60/255, alpha: 1.0)
-let red = UIColor(red: 255/255, green: 0/255, blue: 0/255, alpha: 1.0)
 let firebrick = UIColor(red: 178/255, green: 34/255, blue: 34/255, alpha: 1.0)
 let darkred = UIColor(red: 139/255, green: 0/255, blue: 0/255, alpha: 1.0)
 let pink = UIColor(red: 255/255, green: 192/255, blue: 203/255, alpha: 1.0)
