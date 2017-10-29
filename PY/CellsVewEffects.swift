@@ -53,7 +53,7 @@ class CellsVewEffects: UIView {
 		frontCell.backgroundColor = .red
 		cells[key] = frontCell
 		
-		effect.pop(key: key)
+		effect.glow(key: key)
 		
 	}
 	
@@ -61,29 +61,14 @@ class CellsVewEffects: UIView {
 		
 		targetcell = cells[key]
 
-		let tempEffectView: UIImageView = UIImageView()
-		let temppositon: CGPoint = CGPoint(x: (targetcell?.frame.minX)!, y: (targetcell?.frame.minY)!)
-		let tempsize: CGSize = (targetcell?.frame.size)!
+//		targetcell?.layer.backgroundColor = UIColor.magenta.cgColor
 		
-		tempEffectView.frame = CGRect(origin: temppositon, size: tempsize)
+		let animation = CAKeyframeAnimation(keyPath: "transform.scale")
 		
-		tempEffectView.backgroundColor = blueviolet
-		tempEffectView.layer.borderWidth = 1.5
-		tempEffectView.layer.borderColor = UIColor.gray.cgColor
-		tempEffectView.layer.cornerRadius = 2
-		tempEffectView.layer.masksToBounds = true
-		
-		// superview의 superview에 붙일 수가 있구나
-		targetcell?.superview?.superview?.addSubview(tempEffectView)
-		targetcell?.superview?.superview?.bringSubview(toFront: tempEffectView)
-		
-		
-		UIImageView.animate(withDuration: 1, animations: {
+		for i in 0...10 {
 			
-			tempEffectView.frame.size.width += 50
-			tempEffectView.frame.size.height += 50
-			
-		}, completion: nil)
+		}
+	
 	}
 	
 	func pop(key: String) {

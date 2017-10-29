@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EEAAF3EF1FA0967B00591245 /* mapData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAAF3EE1FA0967B00591245 /* mapData.swift */; };
+		EEAAF3F11FA097AA00591245 /* GlobalFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAAF3F01FA097AA00591245 /* GlobalFunctions.swift */; };
 		EEAD68921F84CCF800BC6A81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAD68911F84CCF800BC6A81 /* AppDelegate.swift */; };
 		EEAD68941F84CCF800BC6A81 /* TitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAD68931F84CCF800BC6A81 /* TitleViewController.swift */; };
 		EEAD68971F84CCF800BC6A81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEAD68951F84CCF800BC6A81 /* Main.storyboard */; };
@@ -42,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EEAAF3EE1FA0967B00591245 /* mapData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapData.swift; sourceTree = "<group>"; };
+		EEAAF3F01FA097AA00591245 /* GlobalFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalFunctions.swift; sourceTree = "<group>"; };
 		EEAD688E1F84CCF800BC6A81 /* PY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEAD68911F84CCF800BC6A81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEAD68931F84CCF800BC6A81 /* TitleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewController.swift; sourceTree = "<group>"; };
@@ -117,7 +121,9 @@
 				EEAD68931F84CCF800BC6A81 /* TitleViewController.swift */,
 				EEAD68C31F84D52D00BC6A81 /* GameViewController.swift */,
 				EEFA5B531F869AC70037FAA0 /* Globals.swift */,
+				EEAAF3F01FA097AA00591245 /* GlobalFunctions.swift */,
 				EECACAF01F88E4E8003287E0 /* Actors.swift */,
+				EEAAF3EE1FA0967B00591245 /* mapData.swift */,
 				EEFC74A81F87922C00FAB69E /* CellData.swift */,
 				EEAD68C91F86412C00BC6A81 /* Color.swift */,
 				EEAD68C71F8634A700BC6A81 /* CellsVewEffects.swift */,
@@ -291,7 +297,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEAAF3EF1FA0967B00591245 /* mapData.swift in Sources */,
 				EEAD68C61F84DED900BC6A81 /* CellsView.swift in Sources */,
+				EEAAF3F11FA097AA00591245 /* GlobalFunctions.swift in Sources */,
 				EECACAF11F88E4E8003287E0 /* Actors.swift in Sources */,
 				EEAD68C41F84D52D00BC6A81 /* GameViewController.swift in Sources */,
 				EEFC74A91F87922C00FAB69E /* CellData.swift in Sources */,

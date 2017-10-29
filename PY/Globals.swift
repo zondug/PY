@@ -4,9 +4,13 @@ import Foundation
 
 // cells를 전역 변수로 만듬
 var cells = [String: UIView]()
+var mapArray = [String: Int]()
 var celldata = CellData()
+var mapdata = mapData()
 var effect = CellsVewEffects()
 var targetcell: UIView?
+var global = GlobalFunctions()
+
 
 // time is 24 hours, player character is a soldier
 var realtime = Date() // sample result: "Oct 7, 2017 at 5:07 PM"
@@ -38,6 +42,10 @@ enum direction: String {
 	case southwest = "1|3"
 	case west = "1|2"
 	case northwest = "1|1"
+	
+	init() {
+		self = .center
+	}
 }
 
 enum attitude: String {

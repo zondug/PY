@@ -18,12 +18,15 @@ class GameViewController: UIViewController {
 	var firstLocation: CGPoint?
 	var secondLocation: CGPoint?
 
+
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-				
+
 //		print("Game View is loaded.")
-		cellsView.drawingCells()
+		
+		mapdata.generateMap()
+		cellsView.initializeCells()
 
 		// ????? what is this fuckin "@objc" on func ?????
 		view.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(self.swipes(swiped:))))
