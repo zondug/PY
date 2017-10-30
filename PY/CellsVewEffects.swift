@@ -85,5 +85,21 @@ class CellsVewEffects: UIView {
 
 		targetcell?.layer.add(keyframeAnimation, forKey: "pop")
 	}
+	
+	// key(String)에서 x와 y를 분리해 내고, 각각을 Int로 변환해서 다시 key로 리턴하려고 했는데, 그냥 글로벌 x,y를 가지고 있고 그걸 합쳐서 key를 만드는게 나은듯
+	func moving(direction: Direction) -> String {
+		
+		var newkey: String = direction.changed()
+		
+		//		mapArray[newkey]
+		
+		// 1. mapArray에 있는 주변 셀들을 전부 불러옴
+		// 2. 셀뷰에 반영
+		// 방향에 따라 좌표를 바꿔야 함
+		
+		var updatedkey = newkey
+		
+		return updatedkey
+	}
 
 }

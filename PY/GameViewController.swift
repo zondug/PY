@@ -117,6 +117,7 @@ class GameViewController: UIViewController {
 			print("released on \(direction).")
 			effect.normalize(key: key)
 			effect.reverse(key: key)
+			effect.moving(direction: direction)
 			return
 			
 		default:

@@ -51,6 +51,56 @@ enum Direction {
 	init() {
 		self = .center
 	}
+	
+	func changed() -> String {
+		
+		var newValue = key
+		
+		switch direction {
+		case .north:
+//			= -
+			currenty -= 1
+			newValue = global.combine(x: currentx, y: currenty)
+		case .northeast:
+//			+ -
+			currentx += 1
+			currenty -= 1
+			newValue = global.combine(x: currentx, y: currenty)
+		case .east:
+//			+ =
+			currentx += 1
+			newValue = global.combine(x: currentx, y: currenty)
+		case .southeast:
+//			+ +
+			currentx += 1
+			currenty += 1
+			newValue = global.combine(x: currentx, y: currenty)
+		case .south:
+//			= +
+			currenty += 1
+			newValue = global.combine(x: currentx, y: currenty)
+		case .southwest:
+//			- +
+			currenty += 1
+			newValue = global.combine(x: currentx, y: currenty)
+		case .west:
+//			- =
+			currentx -= 1
+			newValue = global.combine(x: currentx, y: currenty)
+		case .northwest:
+//			- -
+			currentx -= 1
+			currenty -= 1
+			newValue = global.combine(x: currentx, y: currenty)
+			
+		default:
+			newValue = global.combine(x: currentx, y: currenty)
+		}
+		
+		print(newValue)
+		return newValue
+	}
+	
 }
 
 enum Attitude {
