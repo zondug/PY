@@ -25,7 +25,8 @@ var key: String = direction.center.rawValue {
 		if key != newValue {
 			effect.normalize(key: key)
 			effect.zoom(key: newValue)
-			// if key is not changed, just do nothing
+
+		// if key is not changed, just do nothing
 		} else if key == newValue {
 			return
 		}

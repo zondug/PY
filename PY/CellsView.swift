@@ -72,8 +72,8 @@ class CellsView: UIView {
 //		close view -> touch -> move
 //		해당 방향의 새 값을 mapArray에서 받아 오고, cell에 뿌림
 
-		var keyx = global.split(key: key).0 as! Int
-		var keyy = global.split(key: key).1 as! Int
+		let keyx = Int(global.split(key: key).0)
+		let keyy = Int(global.split(key: key).1)
 		
 		// 방향에 따라 좌표를 바꿔야 함
 		
@@ -91,7 +91,7 @@ class CellsView: UIView {
 //			case northwest = "1|1"
 //		}
 		
-		let currentkey = "\(keyx)|\(keyy)"
+		let currentkey: String = "\(keyx)|\(keyy)"
 		
 		return currentkey
 	}
