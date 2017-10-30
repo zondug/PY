@@ -14,8 +14,8 @@ class Actors {
 	
 	var name: String?
 	var position: String?
-	var language: language
-	var attitude: attitude
+	var language: Language
+	var attitude: Attitude
 	
 	var hp: Int {
 		get {
@@ -23,7 +23,7 @@ class Actors {
 		}
 	}
 	
-	init(name: String, position: String, language: language, attitude: attitude) {
+	init(name: String, position: String, language: Language, attitude: Attitude) {
 		self.name = name
 		self.position = position
 		self.language = language

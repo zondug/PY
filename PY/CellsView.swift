@@ -63,33 +63,20 @@ class CellsView: UIView {
 		}
 	}
 
-	// key에서 x와 y를 분리해 내고, 각각을 Int로 변환해서 다시 key로 리턴한다
-	func moving(to: direction) -> String {
+	// key(String)에서 x와 y를 분리해 내고, 각각을 Int로 변환해서 다시 key로 리턴하려고 했는데, 그냥 글로벌 x,y를 가지고 있고 그걸 합쳐서 key를 만드는게 나은듯
+	func moving(direction: Direction) -> String {
 
-//		to direction은 이미 변화된 ViewController에서 넘어 온 key 값임
 //		방향에 해당하는 뷰를 확대하고 effect.zoom
 //		pop -> reverse -> zoom
 //		close view -> touch -> move
 //		해당 방향의 새 값을 mapArray에서 받아 오고, cell에 뿌림
-
-		let keyx = Int(global.split(key: key).0)
-		let keyy = Int(global.split(key: key).1)
+		
+		
+		
+		let keyx = global.split(key: key).0
+		let keyy = global.split(key: key).1
 		
 		// 방향에 따라 좌표를 바꿔야 함
-		
-		
-		
-//		enum direction: String {
-//			case center = "2|2"
-//			case north = "2|1"
-//			case northeast = "3|1"
-//			case east = "3|2"
-//			case southeast = "3|3"
-//			case south = "2|3"
-//			case southwest = "1|3"
-//			case west = "1|2"
-//			case northwest = "1|1"
-//		}
 		
 		let currentkey: String = "\(keyx)|\(keyy)"
 		

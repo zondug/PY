@@ -10,6 +10,7 @@ var mapdata = mapData()
 var effect = CellsVewEffects()
 var targetcell: UIView?
 var global = GlobalFunctions()
+var direction: Direction = .center
 
 
 // time is 24 hours, player character is a soldier
@@ -18,8 +19,10 @@ let calendar = Calendar.current
 let hour = calendar.component(.hour, from: realtime)
 let minutes = calendar.component(.minute, from: realtime)
 
+var currentx: Int = 2
+var currenty: Int = 2
 
-var key: String = direction.center.rawValue {
+var key: String = global.combine(x: currentx, y: currenty) {
 	willSet {
 		// if key is changed
 		if key != newValue {
@@ -33,33 +36,34 @@ var key: String = direction.center.rawValue {
 	}
 }
 
-enum direction: String {
-	case center = "2|2"
-	case north = "2|1"
-	case northeast = "3|1"
-	case east = "3|2"
-	case southeast = "3|3"
-	case south = "2|3"
-	case southwest = "1|3"
-	case west = "1|2"
-	case northwest = "1|1"
+enum Direction {
+	
+	case center
+	case north
+	case northeast
+	case east
+	case southeast
+	case south
+	case southwest
+	case west
+	case northwest
 	
 	init() {
 		self = .center
 	}
 }
 
-enum attitude: String {
-	case friendly = "Friendly"
-	case hostile = "Hostile"
+enum Attitude {
+	case friendly
+	case hostile
 }
 
-enum language: String {
-	case korean = "Korean"
-	case english = "English"
+enum Language {
+	case korean
+	case english
 }
 
-enum weapon: String {
+enum Weapon: String {
 	case ak47 = "AK-47"
 	case autorifle = "AR 15"
 	case pistol = "Pistol"

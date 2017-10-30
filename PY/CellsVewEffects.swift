@@ -53,7 +53,7 @@ class CellsVewEffects: UIView {
 		frontCell.backgroundColor = .red
 		cells[key] = frontCell
 		
-		effect.glow(key: key)
+//		effect.glow(key: key)
 		
 	}
 	

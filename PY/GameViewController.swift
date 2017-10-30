@@ -49,7 +49,6 @@ class GameViewController: UIViewController {
 		var distance: CGFloat = 0.0
 		let center: CGFloat = 25.0
 		let close: CGFloat = 90
-//		let far: CGFloat = 180
 		
 		switch swiped.state {
 			
@@ -71,28 +70,37 @@ class GameViewController: UIViewController {
 			
 			if distance < center {
 				
-				key = direction.center.rawValue
+				direction = .center
+				key = global.combine(x: currentx, y: currenty)
 				effect.zoom(key: key)
 				
 			} else if center < distance && distance <= close {
 				
 				switch angle {
 				case 22.5 ..< 67.5:
-					key = direction.southeast.rawValue
+					direction = .southeast
+					key = global.combine(x: currentx+1, y: currenty+1)
 				case 67.5 ..< 112.5:
-					key = direction.south.rawValue
+					direction = .south
+					key = global.combine(x: currentx, y: currenty+1)
 				case 112.5 ..< 157.5:
-					key = direction.southwest.rawValue
+					direction = .southwest
+					key = global.combine(x: currentx-1, y: currenty+1)
 				case 157.5 ..< 202.5:
-					key = direction.west.rawValue
+					direction = .west
+					key = global.combine(x: currentx-1, y: currenty)
 				case 202.5 ..< 237.5:
-					key = direction.northwest.rawValue
+					direction = .northwest
+					key = global.combine(x: currentx-1, y: currenty-1)
 				case 237.5 ..< 292.5:
-					key = direction.north.rawValue
+					direction = .north
+					key = global.combine(x: currentx, y: currenty-1)
 				case 292.5 ..< 337.5:
-					key = direction.northeast.rawValue
+					direction = .northeast
+					key = global.combine(x: currentx+1, y: currenty-1)
 				case 337.5 ..< 360, 0 ..< 22.5:
-					key = direction.east.rawValue
+					direction = .east
+					key = global.combine(x: currentx+1, y: currenty)
 				default: break
 				}
 				
@@ -106,7 +114,7 @@ class GameViewController: UIViewController {
 
 			
 		case .ended:
-			//			print("released")
+			print("released on \(direction).")
 			effect.normalize(key: key)
 			effect.reverse(key: key)
 			return
