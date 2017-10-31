@@ -18,6 +18,7 @@ var realtime = Date() // sample result: "Oct 7, 2017 at 5:07 PM"
 let calendar = Calendar.current
 let hour = calendar.component(.hour, from: realtime)
 let minutes = calendar.component(.minute, from: realtime)
+let second = calendar.component(.second, from: realtime)
 
 var currentx: Int = 2
 var currenty: Int = 2
@@ -100,24 +101,6 @@ enum Direction {
 		print(newValue)
 		return newValue
 	}
-	
 }
-
-enum Attitude {
-	case friendly
-	case hostile
-}
-
-enum Language {
-	case korean
-	case english
-}
-
-enum Weapon: String {
-	case ak47 = "AK-47"
-	case autorifle = "AR 15"
-	case pistol = "Pistol"
-}
-
 	
 

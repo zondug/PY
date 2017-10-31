@@ -26,8 +26,8 @@
                                     <segue destination="fXh-b5-JGj" kind="show" animates="NO" id="ADc-g4-uPF"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="spM-WD-rak">
-                                <rect key="frame" x="22.5" y="203" width="329" height="180"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="spM-WD-rak">
+                                <rect key="frame" x="22.5" y="203" width="329" height="107.5"/>
                                 <string key="text">“Yesterday, the heredity dictator Kim tested nuclear weapon experiment again. POTUS was furious about this, decided to surgical strike on major facilities, last night."</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="0.82502140410958902" colorSpace="calibratedRGB"/>

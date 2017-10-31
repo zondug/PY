@@ -11,10 +11,9 @@ import GameplayKit
 
 class GlobalFunctions {
 	
-	func rnadom(max: Int) -> Int {
+	func random(max: Int) -> Int {
 		
-		let max = UInt32(max)
-		let result = Int(arc4random_uniform(max))
+		let result = Int(arc4random_uniform(UInt32(max)))
 		
 		return result
 	}
@@ -48,6 +47,5 @@ class GlobalFunctions {
 		
 		return xy
 	}
-	
 	
 }

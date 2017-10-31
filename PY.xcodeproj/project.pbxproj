@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE6BDA051FA873C300CF70FC /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6BDA041FA873C300CF70FC /* Weather.swift */; };
 		EEAAF3EF1FA0967B00591245 /* mapData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAAF3EE1FA0967B00591245 /* mapData.swift */; };
 		EEAAF3F11FA097AA00591245 /* GlobalFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAAF3F01FA097AA00591245 /* GlobalFunctions.swift */; };
 		EEAD68921F84CCF800BC6A81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAD68911F84CCF800BC6A81 /* AppDelegate.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EE6BDA041FA873C300CF70FC /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		EEAAF3EE1FA0967B00591245 /* mapData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapData.swift; sourceTree = "<group>"; };
 		EEAAF3F01FA097AA00591245 /* GlobalFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalFunctions.swift; sourceTree = "<group>"; };
 		EEAD688E1F84CCF800BC6A81 /* PY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PY.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,6 +123,7 @@
 				EEAD68931F84CCF800BC6A81 /* TitleViewController.swift */,
 				EEAD68C31F84D52D00BC6A81 /* GameViewController.swift */,
 				EEFA5B531F869AC70037FAA0 /* Globals.swift */,
+				EE6BDA041FA873C300CF70FC /* Weather.swift */,
 				EEAAF3F01FA097AA00591245 /* GlobalFunctions.swift */,
 				EECACAF01F88E4E8003287E0 /* Actors.swift */,
 				EEAAF3EE1FA0967B00591245 /* mapData.swift */,
@@ -305,6 +308,7 @@
 				EEFC74A91F87922C00FAB69E /* CellData.swift in Sources */,
 				EEAD68CA1F86412D00BC6A81 /* Color.swift in Sources */,
 				EEAD68941F84CCF800BC6A81 /* TitleViewController.swift in Sources */,
+				EE6BDA051FA873C300CF70FC /* Weather.swift in Sources */,
 				EEFA5B541F869AC70037FAA0 /* Globals.swift in Sources */,
 				EEAD68921F84CCF800BC6A81 /* AppDelegate.swift in Sources */,
 				EEAD689A1F84CCF800BC6A81 /* PY.xcdatamodeld in Sources */,

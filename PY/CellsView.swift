@@ -43,8 +43,6 @@ class CellsView: UIView {
 				
 				cell.addSubview(textlabel)
 				
-				// 셀을 그리면서 셀의 mapArray에서 데이터를 로딩하고 그걸 이미지로 바꿔서 뿌려야 함
-				
 				cell.layer.borderWidth = 1.5
 				cell.layer.borderColor = UIColor.white.cgColor
 				cell.layer.cornerRadius = 2
@@ -54,11 +52,8 @@ class CellsView: UIView {
 				back.addSubview(cell)
 				self.addSubview(back)
 				
-				// 현재는 key 값을 가지고 위치를 알 수가 없게 되어 있음
-				// 이메일 파싱하는 것처럼 앞과 뒤를 분리해서 가져와야 할 듯
 				key = "\(rows)|\(cols)"
 				cells[key] = cell
-
 			}
 		}
 	}
