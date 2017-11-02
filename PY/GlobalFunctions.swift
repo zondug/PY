@@ -9,6 +9,7 @@
 import Foundation
 import GameplayKit
 
+/// Normal Arc4Random number
 class GlobalFunctions {
 	
 	func random(max: Int) -> Int {
@@ -17,7 +18,28 @@ class GlobalFunctions {
 		
 		return result
 	}
+
+	/// Gaussian Random distribution
+	///
+	/// - Returns: Pick a gaussian distributed random number between min ~ max
+	func random(min: Int, max: Int) -> Int {
+		
+		let getRand = GKGaussianDistribution(randomSource: GKRandomSource(), lowestValue: min, highestValue: max)
+		
+		return getRand.nextInt()
+	}
 	
+	/// D20
+	///
+	/// - Returns: d20 random distribution, 1~20
+	func random() -> Int {
+		//
+		
+		let d20 = GKRandomDistribution.d20()
+		
+		return d20.nextInt()
+	}
+
 	// Seprate rows and cols from the key(String)
 	// This function is originally came from a lecture of Realm (https://academy.realm.io/kr/posts/a-neatly-typed-message-improving-code-readability/)
 	

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScappleDocument Version="1.1" ID="5BC34EE5-EEFB-4629-8806-3DCCF15F7C57">
+    <Notes>
+        <Note ID="0" FontSize="12.0" Position="42.890086,26.877514" Width="66.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Clear.clear</String>
+            <ConnectedNoteIDs>2-4, 15</ConnectedNoteIDs>
+            <PointsToNoteIDs>2-4</PointsToNoteIDs>
+        </Note>
+        <Note ID="1" FontSize="12.0" Position="516.580101,653.454921" Width="111.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Snowing.snowflake</String>
+            <ConnectedNoteIDs>6-9</ConnectedNoteIDs>
+            <PointsToNoteIDs>8</PointsToNoteIDs>
+        </Note>
+        <Note ID="2" FontSize="12.0" Position="82.318966,413.809806" Width="87.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Raining.drizzle</String>
+            <ConnectedNoteIDs>0, 4, 6-7, 12</ConnectedNoteIDs>
+            <PointsToNoteIDs>6-7, 12</PointsToNoteIDs>
+        </Note>
+        <Note ID="3" FontSize="12.0" Position="150.398527,95.372126" Width="75.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Windy.windy</String>
+            <ConnectedNoteIDs>0, 4-5, 10</ConnectedNoteIDs>
+            <PointsToNoteIDs>0, 4-5, 10</PointsToNoteIDs>
+        </Note>
+        <Note ID="4" FontSize="12.0" Position="121.508261,230.481142" Width="97.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Readying.cloudy</String>
+            <ConnectedNoteIDs>0, 2-3, 9, 11, 14-15</ConnectedNoteIDs>
+            <PointsToNoteIDs>2, 9, 11, 14-15</PointsToNoteIDs>
+        </Note>
+        <Note ID="5" FontSize="12.0" Position="237.875718,165.598958" Width="86.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Windy.blustery</String>
+            <ConnectedNoteIDs>3, 10</ConnectedNoteIDs>
+            <PointsToNoteIDs>10</PointsToNoteIDs>
+        </Note>
+        <Note ID="6" FontSize="12.0" Position="285.711566,589.91092" Width="93.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Snowing.hailing</String>
+            <ConnectedNoteIDs>1-2, 7</ConnectedNoteIDs>
+            <PointsToNoteIDs>1, 7</PointsToNoteIDs>
+        </Note>
+        <Note ID="7" FontSize="12.0" Position="435.747306,566.447198" Width="99.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Snowing.sleeting</String>
+            <ConnectedNoteIDs>1-2, 6</ConnectedNoteIDs>
+            <PointsToNoteIDs>1</PointsToNoteIDs>
+        </Note>
+        <Note ID="8" FontSize="12.0" Position="701.66523,658.767062" Width="99.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Snowing.blizzard</String>
+            <ConnectedNoteIDs>1</ConnectedNoteIDs>
+        </Note>
+        <Note ID="9" FontSize="12.0" Position="502.049389,503.654993" Width="92.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Snowing.snowy</String>
+            <ConnectedNoteIDs>1, 4</ConnectedNoteIDs>
+            <PointsToNoteIDs>1</PointsToNoteIDs>
+        </Note>
+        <Note ID="10" FontSize="12.0" Position="284.803161,101.635776" Width="67.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Windy.gale</String>
+            <ConnectedNoteIDs>3, 5, 16, 19</ConnectedNoteIDs>
+            <PointsToNoteIDs>16, 19</PointsToNoteIDs>
+        </Note>
+        <Note ID="11" FontSize="12.0" Position="406.492098,289.481142" Width="79.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Raining.rainy</String>
+            <ConnectedNoteIDs>4, 12, 14-15, 19</ConnectedNoteIDs>
+            <PointsToNoteIDs>12</PointsToNoteIDs>
+        </Note>
+        <Note ID="12" FontSize="12.0" Position="465.465158,410.750359" Width="105.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Raining.downpour</String>
+            <ConnectedNoteIDs>2, 11, 16</ConnectedNoteIDs>
+            <PointsToNoteIDs>11</PointsToNoteIDs>
+        </Note>
+        <Note ID="14" FontSize="12.0" Position="296.269217,322.321659" Width="97.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Raining.showers</String>
+            <ConnectedNoteIDs>4, 11, 15, 19</ConnectedNoteIDs>
+            <PointsToNoteIDs>11, 15</PointsToNoteIDs>
+        </Note>
+        <Note ID="15" FontSize="12.0" Position="248.166307,228.674749" Width="101.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Readying.gloomy</String>
+            <ConnectedNoteIDs>0, 4, 11, 14, 19</ConnectedNoteIDs>
+            <PointsToNoteIDs>0, 11, 14, 19</PointsToNoteIDs>
+        </Note>
+        <Note ID="16" FontSize="12.0" Position="541.533046,161.197198" Width="89.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Raining.stormy</String>
+            <ConnectedNoteIDs>10, 12, 19-20</ConnectedNoteIDs>
+            <PointsToNoteIDs>12, 19</PointsToNoteIDs>
+        </Note>
+        <Note ID="17" FontSize="12.0" Position="396.313937,25.12518" Width="40.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Cold</String>
+        </Note>
+        <Note ID="18" FontSize="12.0" Position="544.922953,24.539511" Width="55.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Freezing</String>
+        </Note>
+        <Note ID="19" FontSize="12.0" Position="355.042385,52.050108" Width="98.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Sudden.lightning</String>
+            <ConnectedNoteIDs>10-11, 14-16, 20</ConnectedNoteIDs>
+            <PointsToNoteIDs>11, 14, 20</PointsToNoteIDs>
+        </Note>
+        <Note ID="20" FontSize="12.0" Position="522.2412,59.481681" Width="94.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Sudden.thunder</String>
+            <ConnectedNoteIDs>16, 19</ConnectedNoteIDs>
+            <PointsToNoteIDs>16</PointsToNoteIDs>
+        </Note>
+    </Notes>
+    <BackgroundShapes></BackgroundShapes>
+    <AutoFit>0-12, 14-16, 18-20</AutoFit>
+    <NoteStyles>
+        <Style Name="Title Text" ID="AF824959-F795-45C0-82BE-84EC0D779DF4" AffectFontStyle="Yes" AffectAlignment="Yes" AffectTextColor="No" AffectNoteBody="No" AffectFade="No">
+            <FontSize>28.0</FontSize>
+            <IsBold>Yes</IsBold>
+        </Style>
+        <Style Name="Red Text" ID="CD9D598C-9217-49B9-8819-27E2C33E4EC1" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="Yes" AffectNoteBody="No" AffectFade="No">
+            <TextColor>1.0 0.0 0.0</TextColor>
+        </Style>
+        <Style Name="Brown Bubble" ID="13FD605F-33D4-400B-A529-AE10E231341B" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.290055 0.1523 0.182215</BorderColor>
+            <FillColor>0.940019 0.892907 0.779716</FillColor>
+        </Style>
+        <Style Name="Yellow Bubble" ID="82339C92-E4A1-42B4-A7E0-CA20FE4B9550" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.756763 0.785592 0.373258</BorderColor>
+            <FillColor>0.906773 0.910625 0.634363</FillColor>
+        </Style>
+        <Style Name="Green Bubble" ID="4F2675B5-19AD-415E-82A8-52865072B9E0" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.331867 0.609932 0.356197</BorderColor>
+            <FillColor>0.790123 0.882328 0.80198</FillColor>
+        </Style>
+        <Style Name="Blue Bubble" ID="0AC09237-968D-4570-83DC-0DC4E301C143" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.477193 0.557066 0.76433</BorderColor>
+            <FillColor>0.840969 0.866828 0.925903</FillColor>
+        </Style>
+        <Style Name="Pink Bubble" ID="7A27AD57-388E-4D5F-B0DE-7FC4AC34E81B" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.747881 0.366532 0.542813</BorderColor>
+            <FillColor>0.918452 0.807302 0.863467</FillColor>
+        </Style>
+    </NoteStyles>
+    <UISettings>
+        <BackgroundColor>0.999737 0.986332 0.931298</BackgroundColor>
+        <DefaultFont>Helvetica</DefaultFont>
+        <DefaultTextColor>0.0 0.0 0.0</DefaultTextColor>
+    </UISettings>
+    <PrintSettings PaperSize="595.0,842.0" LeftMargin="72.0" RightMargin="72.0" TopMargin="90.0" BottomMargin="90.0" PaperType="iso-a4" Orientation="Portrait" HorizontalPagination="Clip" VerticalPagination="Auto" ScaleFactor="1.0" HorizontallyCentered="Yes" VerticallyCentered="Yes" Collates="Yes" PagesAcross="1" PagesDown="1"></PrintSettings>
+</ScappleDocument>

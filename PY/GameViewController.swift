@@ -70,16 +70,19 @@ class GameViewController: UIViewController {
 			
 			if distance < center {
 				
-				direction = .center
+//				direction = .center
 				key = global.combine(x: currentx, y: currenty)
 				effect.zoom(key: key)
 				
 			} else if center < distance && distance <= close {
 				
+				// 이 switch에서 key는 view에 적용되는 key임
+				// direction.changed()의 newValue는 최종 변화 값임
 				switch angle {
 				case 22.5 ..< 67.5:
 					direction = .southeast
 					key = global.combine(x: currentx+1, y: currenty+1)
+					
 				case 67.5 ..< 112.5:
 					direction = .south
 					key = global.combine(x: currentx, y: currenty+1)

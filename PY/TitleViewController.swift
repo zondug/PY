@@ -14,6 +14,8 @@ class TitleViewController: UIViewController {
 		super.viewDidLoad()
 		
 //		print("Title View is loaded.")
+		
+//		처음 실행시 인트로 카운터, 인트로 -> 중가시키고, 다음엔 바로 매뉴. 인트로는 메뉴에서 접근 가능
 	}
 
 }

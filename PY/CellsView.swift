@@ -57,6 +57,14 @@ class CellsView: UIView {
 			}
 		}
 	}
+	
+	func drawingcell() {
+		
+//		cell 그리는 부분을 별도 함수로 뺄 수 있나?
+		
+		
+		
+	}
 }
 
 

@@ -98,7 +98,7 @@ enum Direction {
 			newValue = global.combine(x: currentx, y: currenty)
 		}
 		
-		print(newValue)
+//		print(currentx, currenty, newValue)
 		return newValue
 	}
 }

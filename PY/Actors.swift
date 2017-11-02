@@ -35,17 +35,18 @@ class Actors {
 	}
 }
 
-class Enemy: Actors {
-	
-	var weapon: Weapon
-	
-	init(weapon: Weapon) {
-		
-		self.weapon = weapon
-		
-	}
-	
-}
+//class Enemy: Actors {
+//
+//	var weapon: Weapon
+//
+//	init(weapon: Weapon) {
+//
+//		super.init(name: "John", position: "2|2", actorclass: .officer, language: .korean, attitude: .normal)
+//		self.Weapon = weapon
+//
+//	}
+//
+//}
 
 enum Actorclass {
 	case kid

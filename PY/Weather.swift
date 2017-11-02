@@ -37,7 +37,18 @@ class Weather {
 		}
 		return desctext
 	}
-			
+	
+	func changing(to: Weathers) -> Weathers {
+		
+		var currentWeather: Weathers = to
+		
+		// 현재 날씨의 경우 + 온도 
+		
+		
+		var newWeather: Weathers = currentWeather
+		
+		return newWeather
+	}
 }
 
 enum Bodystate: String {
@@ -84,61 +95,42 @@ enum Temperature: String {
 	}
 }
 
-enum Weatherstate {
-	case clear(value: Clear)
-	case rain(value: Raining)
-	case snow(value: Snowing)
-	case ready(value: Readying)
-	case windy(value: Windy)
-	case stopped
-	
-	init() {
-		self = .clear(value: .clear)
-	}
+enum Weathers: String {
+	// clear
+	case clear = "clear"
+
+	// cloudy
+	case partlycloudy = "partly cloudy" // 구름이 끼기 시작함
+	case cloudy = "cloudy" // 흐린
+	case gloomy = "gloomy" // 우울하게 흐린
+	case foggy = "foggy"
+	case overcast = "overcast" // 잔뜩 흐린
+
+	// rain
+	case drizzle = "drizzle" // 이슬비
+	case showers = "showers" // 소나기
+	case rainy = "rainy"
+	case downpour = "downpour" // 폭우
+	case stormy = "stormy"
+	//	case flood = "flood" // 홍수
+
+	// snow
+	case snowy = "snowy"
+	case hailing = "hailing" // 우박
+	case sleeting = "sleeting" // 진눈깨비
+	case snowflake = "snowflake" // 함박눈
+	case blizzard = "blizzard" // 폭설
+
+	// wind
+	//	case breeze = "breeze" // 산들바람
+	case windy = "windy"
+	case gusty = "gusty windy" // 세찬
+	case blustery = "blustery windy" // 거센 바람
+	case gale = "gale windy" // 강풍
+	//	case hurricane = "hurricane" // 허리케인
+
+	// sudden
+	case lightning = "lightning"
+	case thunder = "thunder"
+
 }
-
-enum Raining {
-	case drizzle // 이슬비
-	case showers // 소나기
-	case rainy
-	case downpour // 폭우
-	case stormy
-//	case flood // 홍수
-}
-
-enum Snowing {
-	case snowy
-	case hailing // 우박
-	case sleeting // 진눈깨비
-	case snowflake // 함박눈
-	case blizzard // 폭설
-}
-
-enum Readying {
-	case partlycloudy // 구름이 끼기 시작함
-	case cloudy // 흐린
-	case gloomy // 우울하게 흐린
-	case foggy
-	case overcast // 잔뜩 흐린
-
-}
-
-enum Windy {
-//	case breeze // 산들바람
-	case windy
-	case gusty // 세찬
-	case blustery // 거센 바람
-	case gale // 강풍
-	//	case hurricane // 허리케인
-}
-
-enum Sudden {
-	case lightning
-	case thunder
-}
-
-enum Clear {
-	case clear
-}
-
-
