@@ -9,9 +9,10 @@
 import Foundation
 import GameplayKit
 
-/// Normal Arc4Random number
+
 class GlobalFunctions {
 	
+	/// 일반 Arc4Random
 	func random(max: Int) -> Int {
 		
 		let result = Int(arc4random_uniform(UInt32(max)))
@@ -19,7 +20,7 @@ class GlobalFunctions {
 		return result
 	}
 
-	/// Gaussian Random distribution
+	/// 정규 분포 랜덤
 	///
 	/// - Returns: Pick a gaussian distributed random number between min ~ max
 	func random(min: Int, max: Int) -> Int {
@@ -29,7 +30,7 @@ class GlobalFunctions {
 		return getRand.nextInt()
 	}
 	
-	/// D20
+	/// D20 랜덤
 	///
 	/// - Returns: d20 random distribution, 1~20
 	func random() -> Int {
@@ -43,6 +44,9 @@ class GlobalFunctions {
 	// Seprate rows and cols from the key(String)
 	// This function is originally came from a lecture of Realm (https://academy.realm.io/kr/posts/a-neatly-typed-message-improving-code-readability/)
 	
+	/// key를 받아서 x, y 좌표로 분리함
+	///
+	/// - Returns: 리턴 값은 .0, .1로 접근 가능함
 	func split(key: String) -> (Int, Int) {
 
 	let components = key.components(separatedBy: "|")
@@ -60,6 +64,7 @@ class GlobalFunctions {
 		return sample
 	}
 	
+	// 이건 왜 만들었지?
 	func convert(key: String) -> String {
 
 		let x = self.split(key: key).0
@@ -68,6 +73,17 @@ class GlobalFunctions {
 		let xy = "\(x)|\(y)"
 		
 		return xy
+	}
+	
+	func updateTurnTimer() {
+		
+		var _timecounter = timecounter % 10
+		
+		if _timecounter < 10 {
+			timecounter += timecounter
+		} else {
+			
+		}
 	}
 	
 }

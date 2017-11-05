@@ -33,6 +33,8 @@ class Actors {
 		self.attitude = attitude
 		
 	}
+	
+	
 }
 
 //class Enemy: Actors {

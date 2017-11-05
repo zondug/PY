@@ -24,11 +24,11 @@ class mapData {
 			for cols in 0...(maptype-1) {
 				
 				celltype = Int(arc4random_uniform(UInt32(maptype)))
-				
+//				celltype은 celldata를 불러서 넣음
 		
-				key = "\(rows)|\(cols)"
+				mapkey = "\(rows)|\(cols)"
 				
-				mapArray[key] = celltype
+				mapArray[mapkey] = celltype
 			}
 		}
 

@@ -58,9 +58,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="234-rh-QTS" customClass="CellsView" customModule="PY" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="84" width="375" height="375"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="234-rh-QTS" customClass="CellsView" customModule="PY" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="95" width="375" height="375"/>
                                 <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
                             </view>
@@ -85,9 +84,22 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" ambiguous="YES" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8b6-ab-sPW" customClass="TimerBarView" customModule="PY" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="80" width="375" height="15"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="HfU-My-nyh"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="8b6-ab-sPW" firstAttribute="top" secondItem="Tjh-P6-PkJ" secondAttribute="top" constant="80" id="E8l-Fa-LNl"/>
+                            <constraint firstItem="8b6-ab-sPW" firstAttribute="leading" secondItem="Tjh-P6-PkJ" secondAttribute="leading" id="Q7b-Jh-Q7v"/>
+                            <constraint firstItem="234-rh-QTS" firstAttribute="top" secondItem="8b6-ab-sPW" secondAttribute="bottom" id="dP2-im-cRJ"/>
+                            <constraint firstItem="234-rh-QTS" firstAttribute="leading" secondItem="Tjh-P6-PkJ" secondAttribute="leading" id="f57-07-5Wb"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="pYy-8s-MyD"/>
                     </view>
                     <connections>

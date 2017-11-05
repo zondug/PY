@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EE6BDA051FA873C300CF70FC /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6BDA041FA873C300CF70FC /* Weather.swift */; };
+		EEA9D4681FAEF99C00D02B33 /* TimerBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA9D4671FAEF99C00D02B33 /* TimerBarView.swift */; };
 		EEAAF3EF1FA0967B00591245 /* mapData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAAF3EE1FA0967B00591245 /* mapData.swift */; };
 		EEAAF3F11FA097AA00591245 /* GlobalFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAAF3F01FA097AA00591245 /* GlobalFunctions.swift */; };
 		EEAD68921F84CCF800BC6A81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAD68911F84CCF800BC6A81 /* AppDelegate.swift */; };
@@ -46,6 +47,7 @@
 
 /* Begin PBXFileReference section */
 		EE6BDA041FA873C300CF70FC /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		EEA9D4671FAEF99C00D02B33 /* TimerBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerBarView.swift; sourceTree = "<group>"; };
 		EEAAF3EE1FA0967B00591245 /* mapData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapData.swift; sourceTree = "<group>"; };
 		EEAAF3F01FA097AA00591245 /* GlobalFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalFunctions.swift; sourceTree = "<group>"; };
 		EEAD688E1F84CCF800BC6A81 /* PY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PY.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,6 +134,7 @@
 				EEAD68C71F8634A700BC6A81 /* CellsVewEffects.swift */,
 				EEAD68C51F84DED900BC6A81 /* CellsView.swift */,
 				EEAD68951F84CCF800BC6A81 /* Main.storyboard */,
+				EEA9D4671FAEF99C00D02B33 /* TimerBarView.swift */,
 				EEAD68A01F84CCF800BC6A81 /* Info.plist */,
 			);
 			path = PY;
@@ -304,6 +307,7 @@
 				EEAD68C61F84DED900BC6A81 /* CellsView.swift in Sources */,
 				EEAAF3F11FA097AA00591245 /* GlobalFunctions.swift in Sources */,
 				EECACAF11F88E4E8003287E0 /* Actors.swift in Sources */,
+				EEA9D4681FAEF99C00D02B33 /* TimerBarView.swift in Sources */,
 				EEAD68C41F84D52D00BC6A81 /* GameViewController.swift in Sources */,
 				EEFC74A91F87922C00FAB69E /* CellData.swift in Sources */,
 				EEAD68CA1F86412D00BC6A81 /* Color.swift in Sources */,

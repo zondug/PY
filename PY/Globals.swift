@@ -19,19 +19,23 @@ let calendar = Calendar.current
 let hour = calendar.component(.hour, from: realtime)
 let minutes = calendar.component(.minute, from: realtime)
 let second = calendar.component(.second, from: realtime)
+var turntimer = Timer.scheduledTimer(timeInterval: 1, target: global, selector: "updateTurnTimer", userInfo: nil, repeats: true)
+var timecounter: Int = 0
 
 var currentx: Int = 2
 var currenty: Int = 2
 
-var key: String = global.combine(x: currentx, y: currenty) {
+var mapkey: String = global.combine(x: currentx, y: currenty)
+
+var viewkey: String = "2|2" {
 	willSet {
 		// if key is changed
-		if key != newValue {
-			effect.normalize(key: key)
+		if viewkey != newValue {
+			effect.normalize(key: viewkey)
 			effect.zoom(key: newValue)
 
 		// if key is not changed, just do nothing
-		} else if key == newValue {
+		} else if viewkey == newValue {
 			return
 		}
 	}
@@ -55,51 +59,51 @@ enum Direction {
 	
 	func changed() -> String {
 		
-		var newValue = key
-		
+		// view의 key와 map의 key를 분리해야 함
+		// view의 key는 항상 2|2를 센터로 놓고, map의 key는 좌표에 따라서 계속 이동
 		switch direction {
 		case .north:
 //			= -
 			currenty -= 1
-			newValue = global.combine(x: currentx, y: currenty)
+			mapkey = global.combine(x: currentx, y: currenty)
 		case .northeast:
 //			+ -
 			currentx += 1
 			currenty -= 1
-			newValue = global.combine(x: currentx, y: currenty)
+			mapkey = global.combine(x: currentx, y: currenty)
 		case .east:
 //			+ =
 			currentx += 1
-			newValue = global.combine(x: currentx, y: currenty)
+			mapkey = global.combine(x: currentx, y: currenty)
 		case .southeast:
 //			+ +
 			currentx += 1
 			currenty += 1
-			newValue = global.combine(x: currentx, y: currenty)
+			mapkey = global.combine(x: currentx, y: currenty)
 		case .south:
 //			= +
 			currenty += 1
-			newValue = global.combine(x: currentx, y: currenty)
+			mapkey = global.combine(x: currentx, y: currenty)
 		case .southwest:
 //			- +
 			currenty += 1
-			newValue = global.combine(x: currentx, y: currenty)
+			mapkey = global.combine(x: currentx, y: currenty)
 		case .west:
 //			- =
 			currentx -= 1
-			newValue = global.combine(x: currentx, y: currenty)
+			mapkey = global.combine(x: currentx, y: currenty)
 		case .northwest:
 //			- -
 			currentx -= 1
 			currenty -= 1
-			newValue = global.combine(x: currentx, y: currenty)
+			mapkey = global.combine(x: currentx, y: currenty)
 			
 		default:
-			newValue = global.combine(x: currentx, y: currenty)
+			mapkey = global.combine(x: currentx, y: currenty)
 		}
 		
 //		print(currentx, currenty, newValue)
-		return newValue
+		return mapkey
 	}
 }
 	

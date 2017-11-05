@@ -38,8 +38,8 @@ class CellsView: UIView {
 				textlabel = UILabel(frame: cell.bounds)
 				textlabel.textAlignment = .center
 				textlabel.textColor = .white
-//				textlabel.text = "\(rows, cols)"
-				textlabel.text = "\((mapArray[key])!)"
+				textlabel.text = "\(rows, cols)"
+//				textlabel.text = "\((mapArray[key])!)"
 				
 				cell.addSubview(textlabel)
 				
@@ -52,8 +52,8 @@ class CellsView: UIView {
 				back.addSubview(cell)
 				self.addSubview(back)
 				
-				key = "\(rows)|\(cols)"
-				cells[key] = cell
+				viewkey = "\(rows)|\(cols)"
+				cells[viewkey] = cell
 			}
 		}
 	}

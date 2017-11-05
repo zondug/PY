@@ -89,10 +89,11 @@ class CellsVewEffects: UIView {
 		
 		let newkey: String = direction.changed()
 		
-		//		mapArray[newkey]
+		//		mapArray[mapkey]
 		
 		// 1. mapArray에 있는 주변 셀들을 전부 불러옴
 		// 뷰를 이동하는게 아니라 데이터가 이동하는 거임
+		// 2|2 -> 2|3으로 이동을 하면, 전체 셀을 0|+1 하면 되는듯? 
 		
 		// 2. 셀뷰에 반영
 		
