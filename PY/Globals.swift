@@ -17,10 +17,9 @@ var direction: Direction = .center
 var realtime = Date() // sample result: "Oct 7, 2017 at 5:07 PM"
 let calendar = Calendar.current
 let hour = calendar.component(.hour, from: realtime)
-let minutes = calendar.component(.minute, from: realtime)
-let second = calendar.component(.second, from: realtime)
-var turntimer = Timer.scheduledTimer(timeInterval: 1, target: global, selector: "updateTurnTimer", userInfo: nil, repeats: true)
-var timecounter: Int = 0
+
+var realsecond = Timer()
+var timecounter: Int = 1
 
 var currentx: Int = 2
 var currenty: Int = 2

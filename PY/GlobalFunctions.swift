@@ -75,15 +75,19 @@ class GlobalFunctions {
 		return xy
 	}
 	
-	func updateTurnTimer() {
+	func updateTimer() {
 		
-		var _timecounter = timecounter % 10
+		realsecond = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(global.timecounterIncrease)), userInfo: nil, repeats: true)
+	
+	}
+	
+	@objc func timecounterIncrease() {
+//		print("got the timer")
 		
-		if _timecounter < 10 {
-			timecounter += timecounter
-		} else {
-			
-		}
+		timecounter += timecounter
+		
+		effect.pop(key: "4|4")
+		
 	}
 	
 }

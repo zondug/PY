@@ -13,7 +13,7 @@ class GameViewController: UIViewController {
 	@IBOutlet var weatherUI: UILabel!
 	@IBOutlet var distanceUI: UILabel!
 	@IBOutlet var cellsView: CellsView!
-	
+	@IBOutlet var timerbarView: TimerBarView!
 	
 	var firstLocation: CGPoint?
 	var secondLocation: CGPoint?
@@ -22,13 +22,11 @@ class GameViewController: UIViewController {
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-
-//		print("Game View is loaded.")
 		
 		mapdata.generateMap()
 		cellsView.initializeCells()
+		global.updateTimer()
 
-		// ????? what is this fuckin "@objc" on func ?????
 		view.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(self.swipes(swiped:))))
     }
 
@@ -127,6 +125,8 @@ class GameViewController: UIViewController {
 			break
 		}
 	}
+	
+	
 }
 
 

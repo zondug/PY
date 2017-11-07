@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -58,11 +58,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="234-rh-QTS" customClass="CellsView" customModule="PY" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="95" width="375" height="375"/>
-                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <gestureRecognizers/>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Weather" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MbA-RF-cLO">
                                 <rect key="frame" x="0.0" y="20" width="65" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -84,27 +79,33 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" ambiguous="YES" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8b6-ab-sPW" customClass="TimerBarView" customModule="PY" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="80" width="375" height="15"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8b6-ab-sPW" customClass="TimerBarView" customModule="PY" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="80" width="375" height="5"/>
+                                <color key="backgroundColor" red="0.95686274770000002" green="0.65882354970000001" blue="0.54509806630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="15" id="HfU-My-nyh"/>
+                                    <constraint firstAttribute="height" constant="5" id="HfU-My-nyh"/>
                                 </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="234-rh-QTS" customClass="CellsView" customModule="PY" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="85" width="375" height="375"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="234-rh-QTS" firstAttribute="top" secondItem="8b6-ab-sPW" secondAttribute="bottom" id="78M-UC-ZSP"/>
                             <constraint firstItem="8b6-ab-sPW" firstAttribute="top" secondItem="Tjh-P6-PkJ" secondAttribute="top" constant="80" id="E8l-Fa-LNl"/>
                             <constraint firstItem="8b6-ab-sPW" firstAttribute="leading" secondItem="Tjh-P6-PkJ" secondAttribute="leading" id="Q7b-Jh-Q7v"/>
-                            <constraint firstItem="234-rh-QTS" firstAttribute="top" secondItem="8b6-ab-sPW" secondAttribute="bottom" id="dP2-im-cRJ"/>
                             <constraint firstItem="234-rh-QTS" firstAttribute="leading" secondItem="Tjh-P6-PkJ" secondAttribute="leading" id="f57-07-5Wb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pYy-8s-MyD"/>
                     </view>
                     <connections>
-                        <outlet property="cellsView" destination="234-rh-QTS" id="uSU-P6-2sG"/>
+                        <outlet property="cellsView" destination="234-rh-QTS" id="EsO-yg-7bP"/>
                         <outlet property="distanceUI" destination="vEm-8U-7as" id="3yV-TB-aDw"/>
+                        <outlet property="timerbarView" destination="8b6-ab-sPW" id="bfc-eD-Zck"/>
                         <outlet property="weatherUI" destination="MbA-RF-cLO" id="lxb-hG-CDr"/>
                     </connections>
                 </viewController>
