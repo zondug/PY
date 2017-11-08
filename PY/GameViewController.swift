@@ -26,6 +26,7 @@ class GameViewController: UIViewController {
 		mapdata.generateMap()
 		cellsView.initializeCells()
 		global.updateTimer()
+		timerbarView.timerinitialize()
 
 		view.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(self.swipes(swiped:))))
     }

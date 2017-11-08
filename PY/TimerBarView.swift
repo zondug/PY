@@ -11,14 +11,24 @@ import UIKit
 
 class TimerBarView: UIView {
 	
-	override func draw(_ rect: CGRect) {
+//	let progressbar = UIView()
+
+	func timerinitialize() {
 		
-		let timerprogress = UIBezierPath(rect: CGRect(x: frame.minX, y: frame.minY,
-													  width: (CGFloat(timecounter) * 0.1) * frame.width,
-													  height: frame.height))
-		myred.setFill()
-		timerprogress.fill()
 		
-		setNeedsDisplay()
+		let cellsize: CGFloat = CGFloat((self.frame.maxX)/10)
+
+		for count in 0...9 {
+			
+			let progresscell = UIView()
+			progresscell.frame = CGRect(x: (CGFloat(count) * cellsize), y: self.frame.minY, width: cellsize, height: self.frame.height)
+			progresscell.backgroundColor = myred
+			progresscell.isHidden = true
+			
+			superview?.addSubview(progresscell)
+			timerbar["\(count)"] = progresscell
+			
+		}
 	}
+	
 }

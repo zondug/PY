@@ -4,6 +4,7 @@ import Foundation
 
 // cells를 전역 변수로 만듬
 var cells = [String: UIView]()
+var timerbar = [String:UIView]()
 var mapArray = [String: Int]()
 var celldata = CellData()
 var mapdata = mapData()
@@ -18,8 +19,7 @@ var realtime = Date() // sample result: "Oct 7, 2017 at 5:07 PM"
 let calendar = Calendar.current
 let hour = calendar.component(.hour, from: realtime)
 
-var realsecond = Timer()
-var timecounter: Int = 1
+var timecounter: Int = 0
 
 var currentx: Int = 2
 var currenty: Int = 2
