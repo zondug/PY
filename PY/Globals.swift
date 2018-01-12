@@ -19,12 +19,26 @@ var realtime = Date() // sample result: "Oct 7, 2017 at 5:07 PM"
 let calendar = Calendar.current
 let hour = calendar.component(.hour, from: realtime)
 
-var timecounter: Int = 0
+var timecounter: Int = 0 {
+	didSet {
+		
+	}
+}
 
-var currentx: Int = 2
-var currenty: Int = 2
+// currentx, currenty는 mapkey임
+// 초기화를 computed property로 만들어야 함
+var currentx: Int {
+	get {
+		return global.split(key: mapkey).0
+	}
+}
+var currenty: Int {
+	get{
+		return global.split(key: mapkey).1
+	}
+}
 
-var mapkey: String = global.combine(x: currentx, y: currenty)
+var mapkey: String = viewkey
 
 var viewkey: String = "2|2" {
 	willSet {
@@ -60,42 +74,44 @@ enum Direction {
 		
 		// view의 key와 map의 key를 분리해야 함
 		// view의 key는 항상 2|2를 센터로 놓고, map의 key는 좌표에 따라서 계속 이동
+
 		switch direction {
 		case .north:
 //			= -
-			currenty -= 1
-			mapkey = global.combine(x: currentx, y: currenty)
+//			currenty -= 1
+			mapkey = global.combine(x: currentx, y: currenty - 1)
 		case .northeast:
 //			+ -
-			currentx += 1
-			currenty -= 1
-			mapkey = global.combine(x: currentx, y: currenty)
+//			currentx += 1
+//			currenty -= 1
+			mapkey = global.combine(x: currentx + 1, y: currenty - 1)
 		case .east:
 //			+ =
-			currentx += 1
-			mapkey = global.combine(x: currentx, y: currenty)
+//			currentx += 1
+			mapkey = global.combine(x: currentx + 1, y: currenty)
 		case .southeast:
 //			+ +
-			currentx += 1
-			currenty += 1
-			mapkey = global.combine(x: currentx, y: currenty)
+//			currentx += 1
+//			currenty += 1
+			mapkey = global.combine(x: currentx + 1, y: currenty + 1)
 		case .south:
 //			= +
-			currenty += 1
-			mapkey = global.combine(x: currentx, y: currenty)
+//			currenty += 1
+			mapkey = global.combine(x: currentx, y: currenty + 1)
 		case .southwest:
 //			- +
-			currenty += 1
-			mapkey = global.combine(x: currentx, y: currenty)
+//			currentx -+ 1
+//			currenty += 1
+			mapkey = global.combine(x: currentx - 1, y: currenty + 1)
 		case .west:
 //			- =
-			currentx -= 1
-			mapkey = global.combine(x: currentx, y: currenty)
+//			currentx -= 1
+			mapkey = global.combine(x: currentx - 1, y: currenty)
 		case .northwest:
 //			- -
-			currentx -= 1
-			currenty -= 1
-			mapkey = global.combine(x: currentx, y: currenty)
+//			currentx -= 1
+//			currenty -= 1
+			mapkey = global.combine(x: currentx - 1, y: currenty - 1)
 			
 		default:
 			mapkey = global.combine(x: currentx, y: currenty)

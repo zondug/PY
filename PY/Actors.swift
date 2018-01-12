@@ -8,6 +8,12 @@
 
 import Foundation
 
+// Actors의 상태는 delegate로 만드는게 가능할 것으로 보임
+// delegate & protocol tutorial
+// 1. https://hcn1519.github.io/articles/2017-11/Swift_Protocol_Part1
+
+// ActorsState: ActorDelegate <- 
+
 class Actors {
 
 	private var _hp: Int = 100;

@@ -77,20 +77,23 @@ class GlobalFunctions {
 	
 	func updateTimer() {
 		
-		var realsecond = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(global.timecounterIncrease)), userInfo: nil, repeats: true)
+		var _ = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(global.timecounterIncrease)), userInfo: nil, repeats: true)
 	
 	}
 	
 	@objc func timecounterIncrease() {
 //		print("got the timer")
 		
-		if timecounter < 10 {
-			timerbar["\(timecounter)"]?.isHidden = false
+		if timecounter < 9 {
+//			timerbar["\(timecounter)"]?.isHidden = false
+			effect.coloredpop(targetview: timerbar["\(timecounter)"]!, duration: Double(3 - timecounter))
 			timecounter = timecounter + 1
-		} else if timecounter == 10 {
-			for i in 0...9 {
-				timerbar["\(i)"]?.isHidden = true
-			}
+		} else {
+//			timerbar["9"]?.isHidden = false
+			effect.coloredpop(targetview: timerbar["9"]!, duration: Double(3 - timecounter))
+//			for i in 0...9 {
+//				timerbar["\(i)"]?.isHidden = true
+//			}
 			timecounter = 0
 		}
 		

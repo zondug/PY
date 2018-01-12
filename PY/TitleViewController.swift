@@ -10,13 +10,32 @@ import UIKit
 
 class TitleViewController: UIViewController {
 
+	@IBOutlet var button: UIButton!
+	var introPlayed = false
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-//		print("Title View is loaded.")
+
+//		첫 실행이면 인트로를 실행하고 인트로 카운트를 체크
+//		introPlayed = true
 		
-//		처음 실행시 인트로 카운터, 인트로 -> 중가시키고, 다음엔 바로 매뉴. 인트로는 메뉴에서 접근 가능
+//		if introPlayed == true {
+//
+//			button.isHidden = false
+//
+//		} else {
+//
+//			button.isHidden = true
+////			play Intro Scene
+////			Skip
+//			introPlayed = true
+//		}
 	}
 
+	@IBAction func start(_ sender: Any) {
+		performSegue(withIdentifier: "start", sender: self)
+	}
+	
 }
 

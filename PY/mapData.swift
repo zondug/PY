@@ -35,6 +35,13 @@ class mapData {
 //		print(mapArray)
 	}
 	
+	func moveto(direcion: Direction) {
+
+//		현재 맵 데이터와 보고 있는 지점(중심 값)을 기준으로 해서 이동해서 좌표를 로딩
+		
+		
+	}
+	
 	
 }
 

@@ -13,23 +13,19 @@ class CellsVewEffects: UIView {
 	
 	func zoom(key: String) {
 		
-		targetcell = cells[key]
-		
 		UIView.animate(withDuration: 0.1, delay: 0, options: .curveEaseOut, animations: {
-			targetcell?.layer.transform = CATransform3DMakeScale(1.1, 1.1, 1.1)
+			cells[key]?.layer.transform = CATransform3DMakeScale(1.1, 1.1, 1.1)
 		}, completion: nil)
-		targetcell?.backgroundColor = .yellow
+		cells[key]?.backgroundColor = .yellow
 	}
 	
 	func normalize(key: String) {
 		
-		targetcell = cells[key]
-		
 		UIView.animate(withDuration: 0.1, delay: 0, options: .curveEaseOut, animations: {
-			targetcell?.layer.transform = CATransform3DMakeScale(1.0, 1.0, 1.0)
+			cells[key]?.layer.transform = CATransform3DMakeScale(1.0, 1.0, 1.0)
 		}, completion: nil)
 		
-		targetcell?.backgroundColor = .black
+		cells[key]?.backgroundColor = .black
 		
 		// normalize를 실행한 뒤에 센터 셀(좌표를 확인한 뒤) 깜빡 
 		
@@ -37,12 +33,10 @@ class CellsVewEffects: UIView {
 	
 	func reverse(key: String) {
 		
-		targetcell = cells[key]
-		
 		// frontCell은 카드를 뒤집을 때 나오는 화면임 -> 확대 -> 터치(사라짐) -> 셀 뷰 삭제 -> 이동
 		let frontCell = UIImageView()
 
-		frontCell.frame = (targetcell?.bounds)!
+		frontCell.frame = (cells[key]?.bounds)!
 		
 		frontCell.backgroundColor = .gray
 		frontCell.layer.borderWidth = 1.5
@@ -50,7 +44,7 @@ class CellsVewEffects: UIView {
 		frontCell.layer.cornerRadius = 2
 		frontCell.layer.masksToBounds = true
 		
-		UIView.transition(from: targetcell!, to: frontCell, duration: 0.2, options: UIViewAnimationOptions.transitionFlipFromRight, completion: nil)
+		UIView.transition(from: cells[key]!, to: frontCell, duration: 0.2, options: UIViewAnimationOptions.transitionFlipFromRight, completion: nil)
 		
 		frontCell.backgroundColor = .red
 		cells[key] = frontCell
@@ -71,8 +65,6 @@ class CellsVewEffects: UIView {
 	
 	func pop(key: String) {
 		
-		targetcell = cells[key]
-		
 		// This part is from a book 'IOS Swift Game Development Cookbook' of O'Reilly Media, p60
 		
 		let keyframeAnimation = CAKeyframeAnimation(keyPath: "transform.scale")
@@ -81,13 +73,31 @@ class CellsVewEffects: UIView {
 		keyframeAnimation.duration = 0.4
 		keyframeAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
 
-		targetcell?.layer.add(keyframeAnimation, forKey: "pop")
+		cells[key]?.layer.add(keyframeAnimation, forKey: "pop")
+	}
+	
+	func coloredpop(targetview: UIView, duration: Double) {
+				
+//		let keyframeAnimation = CAKeyframeAnimation(keyPath: "transform.scale")
+//		keyframeAnimation.keyTimes = [0.0, 0.1, 0.3, 0.5]
+//		keyframeAnimation.values = [0.0, 1.2, 1.0, 0.0]
+//		keyframeAnimation.duration = 0.5
+//		keyframeAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+//		targetview.layer.isHidden = false
+		targetview.backgroundColor = myred
+
+		UIView.animate(withDuration: duration, delay: 0, options: (.curveEaseOut), animations: {
+			targetview.layer.transform = CATransform3DMakeScale(1.0, 2.0, 1.0)
+			targetview.layer.transform = CATransform3DMakeScale(1.0, 1.0, 1.0)
+		}, completion: nil)
 	}
 	
 	// key(String)에서 x와 y를 분리해 내고, 각각을 Int로 변환해서 다시 key로 리턴하려고 했는데, 그냥 글로벌 x,y를 가지고 있고 그걸 합쳐서 key를 만드는게 나은듯
 	func moving(direction: Direction) -> String {
 		
 		let newkey: String = direction.changed()
+		print(newkey)
+		
 		
 		//		mapArray[mapkey]
 		
