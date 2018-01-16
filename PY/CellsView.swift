@@ -31,7 +31,7 @@ class CellsView: UIView {
 			for cols in 0...(noOfCells-1) {
 				
 				let back = UIView()
-				back.frame = CGRect(x: centering + (rows * cellsize) + (spacing * rows), y: centering + (cols * cellsize) + (spacing * cols), width: cellsize, height: cellsize)
+				back.frame = CGRect(x: centering + (rows * cellsize) + (rows * spacing), y: centering + (cols * cellsize) + (cols * spacing), width: cellsize, height: cellsize)
 				let cell: UIImageView = UIImageView(frame: back.bounds)
 
 				// 이 레이블은 이제 UIImage로 교체해야 함: celldata <- mapdata

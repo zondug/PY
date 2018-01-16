@@ -33,8 +33,10 @@ class TitleViewController: UIViewController {
 //		}
 	}
 
-	@IBAction func start(_ sender: Any) {
+	@IBAction func start(_ sender: UIButton) {
+		
 		performSegue(withIdentifier: "start", sender: self)
+
 	}
 	
 }
